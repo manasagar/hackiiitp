@@ -27,7 +27,12 @@ router
         else{
             details.push("Extra active");
         }
-        details.push(no_meals);
+        if(no_meals<=5){
+            details.push(no_meals);
+        }
+        else {
+            details.push(5);
+        }
         if(weightLoss=="Maintain Weight"){
             details.push(String(1));
         }
@@ -42,7 +47,7 @@ router
         }
         console.log(details);
         const Plan= await axios.post('http://127.0.0.1:5000/nutrition',{details});
-        console.log(Plan.data[0])
+        console.log(Plan.data)
         res.status(200).send(Plan.data);
         }catch(error){
             console.log(error);

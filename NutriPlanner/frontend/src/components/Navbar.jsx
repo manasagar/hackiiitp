@@ -51,13 +51,13 @@ export const Navbar =({token,setToken})=> {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/price"
+                  to="/blogs"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeMobileMenu}
                 >
-                  Price
+                  Blogs
                 </NavLink>
               </li>
               <li className="nav-item">
