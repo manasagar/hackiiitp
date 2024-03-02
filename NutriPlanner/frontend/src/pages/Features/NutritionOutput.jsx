@@ -8,27 +8,6 @@ export const NutritionOutput = () => {
     const data = location.state.output;
     console.log(data);
 
-    const height = (data.height)/100;
-    const weight = data.weight;
-    const calH = (height*height);
-
-    let BMI = weight/calH;
-
-    let category = "";
-
-    if(BMI<18.5){
-      category = "Underweight";
-    }
-    else if(BMI>=18.5 && BMI<25){
-      category = "Normal";
-    }
-    else if(BMI>=25 && BMI<30){
-      category = "Overweight";
-    }
-    else{
-      category = "Obesity";
-    }
-
     const units = {
       Calories : 'cal',
       Fats : 'cal',
@@ -42,10 +21,6 @@ export const NutritionOutput = () => {
       VitaminD : 'mg',
       Sugars : 'mg'
     }
-
-
-    const foodItems = data.plan.map((foodItem, index) => (
-
     
     const height = (data.height)/100;
     const weight = data.weight;

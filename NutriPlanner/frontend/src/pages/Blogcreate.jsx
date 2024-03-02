@@ -101,7 +101,9 @@ export const Blogcreate = () => {
             onChange={onChangeHandler}
             autoComplete="off"
             required
+            style={{ resize: 'none', width: '90%', maxWidth: '90%' }}
           ></textarea>
+
           <br />
           {error && <p className="error">{error}</p>}
           <div className="blogcreate-wrapper">
