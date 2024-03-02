@@ -56,9 +56,12 @@ export const Tracker = () => {
     <div className='tracker-outer'>
       <BackButton />
       {loading ? <Loading /> : (
+        <div>
+          <p className='nutri-header'>NutriScan - Personalized Nutrition Tracker</p>
+          <p className='nutri-body'>NutriScan is a powerful tool designed to help you track and analyze your daily nutrient intake. By inputting your food consumption, NutriScan will provide you with detailed information on the nutrients you're consuming, helping you make informed decisions about your diet. To get started, simply fill out the form below with the foods you've eaten today. NutriScan will then calculate the nutrient counts for each item, giving you a comprehensive overview of your nutrient intake.</p>
           <div className="nutrition-container">
             <form className='nutrition-form' onSubmit={handleSubmit}>
-            <h1>Tracker Form</h1>
+            <h1 className='nutri-title'>NutriScan Form</h1>
               <label className="nutrition-form-label">
                 What did you eat for breakfast this morning?
                   <br />
@@ -114,6 +117,7 @@ export const Tracker = () => {
                 {error && <p className="error">{error}</p>}
                 <button className='nutrition-submit-button' type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</button>
               </form>
+          </div>
        </div>
        )}
     </div>

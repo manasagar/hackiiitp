@@ -6,6 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import { GiChestnutLeaf } from "react-icons/gi";
 
 export const Navbar =({token,setToken})=> {
   const [click, setClick] = useState(false);
@@ -31,7 +32,7 @@ export const Navbar =({token,setToken})=> {
         <nav className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <GiRocketThruster className="navbar-icon" />
+              <GiChestnutLeaf  className="navbar-icon" />
               NutriPlan
             </Link>
             <div className="menu-icon" onClick={handleClick}>

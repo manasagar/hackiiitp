@@ -27,7 +27,6 @@ export const Blogcreate = () => {
             try {
               setLoading(true);
               const response = await axios.post('/api/blogs/create',blogForm);
-              console.log(response.data);
               navigate('/blogs');
             } catch (error) {
               console.log(error);

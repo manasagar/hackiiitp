@@ -17,13 +17,11 @@ router
             return res.status(400).send("Atleast one field is necessary");
         }
         const resBody=await axios.post('http://localhost:5000/food_info',{food : food});
-        // console.log(resBody.data);
         const foods = resBody.data;
         const foodsArray = Object.keys(foods).map(food => ({ name: food, nutrients: foods[food] }));
-        console.log(foodsArray[0]);
         res.status(200).send(foodsArray);
         }catch(error){
-            console.log(error);
+            res.status(401).send('Try Again');
         }
     })
 

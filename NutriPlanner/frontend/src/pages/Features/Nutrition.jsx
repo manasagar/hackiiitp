@@ -58,9 +58,12 @@ export const Nutrition = () => {
     <div className='Nutri_outer'>
     <BackButton />
     {loading ? <Loading /> : (
+    <div>
+    <p className='nutri-header'>Experience Tailored Nutrition with NutriPlan's Interactive Diet Planner!</p>
+    <p className='nutri-body'>At NutriPlan, we offer a seamless way for users to embark on their personalized health journey. Simply fill out our user-friendly form, and unlock a customized diet plan designed just for you. Our intuitive platform ensures that your dietary needs and preferences are taken into account, providing you with a comprehensive and tailored nutrition guide. Start your wellness transformation today by completing our form and receiving your unique plan to kickstart a healthier lifestyle!</p>
     <div className="nutrition-container">
       <form className='nutrition-form' onSubmit={handleSubmit}>
-      <h1>Nutrition Form</h1>
+      <p className='nutri-title'>Diet Planner Form</p>
         <label className="nutrition-form-label">
           What is your Age?
           <br />
@@ -108,7 +111,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="male">
             <input
-            className='radio'
+              className='radio'
               type="radio"
               id="male"
               name="gender"
@@ -121,6 +124,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="female">
             <input
+              className='radio'
               type="radio"
               id="female"
               name="gender"
@@ -165,6 +169,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="maintain-weight">
           <input
+            className='radio'
             type="radio"
             name="weightLoss"
             value="Maintain Weight"
@@ -177,6 +182,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="mild-loss">
           <input
+            className='radio'
             type="radio"
             name="weightLoss"
             value="Mild Weight Loss"
@@ -189,6 +195,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="weight-loss">
           <input
+            className='radio'
             type="radio"
             name="weightLoss"
             value="Moderate Weight Loss"
@@ -201,6 +208,7 @@ export const Nutrition = () => {
           <br />
           <label htmlFor="extreme-loss">
           <input
+            className='radio'
             type="radio"
             name="weightLoss"
             value="Extreme Weight Loss"
@@ -215,6 +223,7 @@ export const Nutrition = () => {
        {error && <p>{error}</p>}
        <button className='nutrition-submit-button' type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</button>
      </form>
+   </div>
    </div>
    )}
    </div>
