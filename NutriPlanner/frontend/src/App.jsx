@@ -9,7 +9,6 @@ import {
 import { Layout } from './components/Layout';
 import { About } from './pages/About';
 import { Home } from './pages/Home';
-import { Price } from './pages/Price';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Features } from './pages/Features';
@@ -22,6 +21,9 @@ import { useState } from 'react';
 import { ErrorPage } from './components/ErrorPage';
 import { NutritionOutput } from './pages/Features/NutritionOutput';
 import { TrackerOutput } from './pages/Features/TrackerOutput';
+import { Blogs } from './pages/Blogs';
+import { Blogdetail } from './pages/Blogdetail';
+import { Blogcreate } from './pages/Blogcreate';
 
 
 export const App =()=>{
@@ -36,8 +38,10 @@ export const App =()=>{
     >
       <Route index element={<Home />} />
       <Route path='/about' element={<About />} />
-      <Route path='/price' element={<Price />} />
-      
+      <Route path='/blogs' element={<Blogs />} />
+      <Route path='/blogs/detail' element={<Blogdetail />} />
+      <Route path='/blogs/create' element={<Blogcreate />} />
+
       {token ? (
         <>
           <Route path='/features' element={<Features />} />
@@ -56,6 +60,7 @@ export const App =()=>{
           <Route path="/features/*" element={<Navigate to="/signup" replace />} />
         </>
       )}
+
       <Route path='*' element={<ErrorPage/>}/>
     </Route>
   ));

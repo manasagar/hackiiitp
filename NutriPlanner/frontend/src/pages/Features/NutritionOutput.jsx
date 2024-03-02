@@ -4,45 +4,36 @@ import { BackButton } from '../../components/BackButton';
 
 export const NutritionOutput = () => {
     const location = useLocation();
-    const output = location.state.output;
-    const cards = output.map((obj)=>{
-      return(
-        <React.Fragment key={obj.RecipeId}>
-          {obj.map((obj) => (
-            <React.Fragment key={obj.RecipeId}>
-              <img src={obj.image_link} alt="Food Item" />
-              <h1>Name - {obj.Name}</h1>
-              <ul>
-                <li>
-                  Calories - {obj.Calories}  
-                  FatContent - {obj.FatContent} 
-                  SaturatedFatContent - {obj.SaturatedFatContent}
-                </li>
-                <li>
-                  CholesterolContent - {obj.CholesterolContent}  
-                  CarbohydrateContent - {obj.CarbohydrateContent} 
-                  SodiumContent - {obj.SodiumContent}
-                </li>
-                <li>
-                  ProteinContent - {obj.ProteinContent}  
-                  SugarContent - {obj.SugarContent} 
-                  FiberContent - {obj.FiberContent}
-                </li>
-              </ul> 
-              <ul>
-                {obj.RecipeIngredientParts.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
-              </ul>
-            </React.Fragment>
-          ))}
-        </React.Fragment>
+    const food = location.state.output;
+
+    const foodItems = Object.keys(food).map((val,ind)=>{
+      return (
+          <div key={ind+1}>
+            <p>Food Item - {val}</p>
+            <img src={food[val].image} alt="Food Item Image" />
+            {food[val].VegNovVeg == 0 ? <div className='veg'></div> : <div className='nonveg'></div>}
+            <p>Nutrients</p>
+            <ul>
+              <li>Calories = {food[val].Calories}</li>
+              <li>Fats = {food[val].Fats}</li>
+              <li>Carbohydrates = {food[val].Carbohydrates}</li>
+              <li>Proteins = {food[val].Proteins}</li>
+              <li>Fibre = {food[val].Fibre}</li>
+              <li>Sugars = {food[val].Sugars}</li>
+              <li>Calcium = {food[val].Calcium}</li>
+              <li>Iron = {food[val].Iron}</li>
+              <li>Sodium = {food[val].Sodium}</li>
+              <li>Potassium = {food[val].Potassium}</li>
+              <li>VitaminD = {food[val].VitaminD}</li>
+            </ul>
+          </div>
       )
     })
+
   return (
     <div>
         <BackButton />
-        {cards}
+        {foodItems}
     </div>
   )
 }

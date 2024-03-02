@@ -54,6 +54,25 @@ export const About = () => {
         <div className="About_topic_text"><p>Whether you're on a quest for weight loss, muscle gain, or all-around well-being, NutriPlan is your companion. Our platform integrates the latest scientific insights into practical, personalized recommendations, making wellness an achievable and enjoyable journey. Our commitment to ongoing research and development is the cornerstone of our mission.</p></div>
         
       </div>
+      <div className='FAQ_main'>
+        <div className='Faq_heading'><h4>FAQs</h4></div>
+        <div className='About_faq_content'>
+        <div>Q: What is NutriPlanner?</div>
+        <div>A: NutriPlanner is a revolutionary platform designed to provide personalized diet recommendations, interactive features, and expert guidance to help individuals achieve their health and wellness goals. Our mission is to make nutrition and fitness accessible, enjoyable, and tailored to each user's unique needs.</div>
+        </div>
+        <div className='About_faq_content'>
+        <div>Q: How can I use the personalized diet plans feature?</div>
+        <div>A: Utilizing the personalized diet plans feature is simple. After creating an account and completing your profile, you'll answer a series of questions about your preferences, dietary restrictions, and health goals. Our algorithm will then generate a customized diet plan that suits your needs. You can find and adjust your plan in the user dashboard.</div>
+        </div>
+        <div className='About_faq_content'>
+        <div>Q: How is my personal information protected?</div>
+        <div>A: We prioritize the privacy and security of your information. All personal data is encrypted and stored securely. We adhere to strict privacy policies, and your information is never shared with third parties without your consent.</div>
+        </div>
+        <div className='About_faq_content'>
+        <div>Q: Is there a community forum for users to connect?</div>
+        <div>A: Absolutely! Join our community forum to connect with other users, share experiences, and exchange tips on health and wellness. Visit our Community Forum to get started.</div>
+        </div>
+      </div>
     </div>
     </div>
   )

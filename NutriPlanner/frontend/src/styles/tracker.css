@@ -12,11 +12,35 @@
     background-color: #f4f4f4;
 }
 
-@media screen and (max-width : 960px) {
+.tracker_main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tracker_component{
+    width: 40vw;
+}
+.Piechart_container{
+    width: 40vw;
+    height: 40vh;
+}
+@media screen and (max-width : 988px) {
     .nutrition-form {
         width: 80vw;
     }
     .tracker-form-input{
         width: 60vw;
+    }
+}
+
+@media screen and (max-width : 840px){
+    .tracker_component{
+        width: 80vw;
+    }
+    .Piechart_container{
+        width: 80vw;
+        height: auto;
     }
 }
