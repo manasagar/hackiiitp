@@ -18,7 +18,7 @@ def scaling(dataframe):
     return prep_data,scaler
 
 def nn_predictor(prep_data):
-    neigh = NearestNeighbors(metric='cosine',algorithm='brute')
+    neigh = NearestNeighbors(metric='cosine',algorithm='brute',n_neighbors=7)
     neigh.fit(prep_data)
     return neigh
 
@@ -42,7 +42,7 @@ def apply_pipeline(pipeline,_input,extracted_data):
     _input=np.array(_input).reshape(1,-1)
     return extracted_data.iloc[pipeline.transform(_input)[0]]
 
-def recommend(dataframe,params={'n_neighbors':5,'return_distance':False}):
+def recommend(dataframe,params={'n_neighbors':7,'return_distance':False}):
         extracted_data=dataframe
         dataframe=np.array(dataframe)
 
