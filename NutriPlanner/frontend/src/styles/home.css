@@ -1,0 +1,143 @@
+.Home_back_image{
+    width:100vw;
+    z-index: -1;
+    height: auto;
+}
+.Home_Screen{
+    width: 100vw;
+    position: relative;
+    background-color:#f1f1ea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10vh;
+}
+.Home_Text_cover{
+    
+    position: absolute;
+    left: 3vw;
+    top: 0;
+    width: 50vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Home_diet_planner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Home_Text{
+    text-align: center;
+    font-size: 1.5rem;
+    /* color: black; */
+    color: #21695c;
+    font-family: Poppins, sans-serif;
+}
+.Diff_vegies{
+    max-width: 35vw;
+    width: 100%;
+    height: auto;
+}
+.Home_diet_Planner_text{
+    font-size: 1.5rem;
+    max-width: 35vw;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-family: Poppins, sans-serif;
+}
+
+.Home_testimonial-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.Home_testimonial-card {
+    flex: 0 0 calc(33.33% - 20px);
+     margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgb(252, 237, 216);
+}
+
+.Home_testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: Poppins, sans-serif;
+}
+
+.Home_testimonial-info {
+    display: flex;
+    align-items: center;
+}
+
+.Home_testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.Home_testimonial-author {
+    flex-grow: 1;
+}
+
+.Home_author-name {
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    color: #333;
+}
+
+.Home_author-position {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    /* color: #333; */
+}
+
+
+@media screen and (max-width: 680px){
+    .Home_Text {
+        font-size: 0.9rem;
+    }
+    .Home_testimonial-container{
+        flex-direction: column;
+    } 
+    .Diff_vegies{
+        max-width: 90vw;
+        height: auto;
+    }
+    .Home_Text_cover{
+        height: 50vh;
+    }
+    .Home_back_image{
+        height: 50vh;
+        object-fit: cover;
+    }
+    .Home_diet_Planner_text{
+        max-width: 90vw;
+    }
+}
+@media screen and (min-width: 680px) and (max-width:988px) {
+    .Home_Text_cover{
+        height: 50vh;
+    }
+    .Home_back_image{
+        height: 50vh;
+        object-fit: cover;
+    }
+}

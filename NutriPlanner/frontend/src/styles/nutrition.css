@@ -1,0 +1,73 @@
+.Nutri_outer{
+  background-color: #f1f1ea;
+}
+.nutrition-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nutrition-form{
+    width: 50vw;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+  
+  .nutrition-form-label {
+    display: block;
+    margin: 6px;
+  }
+  
+  .nutrition-form-input {
+    width: 14vw;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    border: none; 
+    margin-top: 8px;
+  }
+  
+  .nutrition-submit-button {
+    cursor: pointer;
+    font-size: 1rem;
+    width: 10vw;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #21695c;
+    color: #fff; 
+    border-radius: 10px;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+Firefox
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  .nutrition-submit-button:hover{
+    background-color: #3a9e86; 
+    box-shadow: none;
+  }
+  .nutrition-submit-button:disabled {
+    background-color: #ccc;
+}
+
+@media screen and (max-width : 960px) {
+    .nutrition-form {
+        width: 80vw;
+    }
+    .nutrition-form-input{
+        width: 40vw;
+    }
+    .nutrition-submit-button{
+    width: 25vw;
+
+    }
+}

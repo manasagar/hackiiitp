@@ -1,0 +1,22 @@
+.tracker-form-input {
+    width: 20vw;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    border: none; 
+    margin-top: 8px;
+}
+
+.tracker-outer{
+    background-color: #f4f4f4;
+}
+
+@media screen and (max-width : 960px) {
+    .nutrition-form {
+        width: 80vw;
+    }
+    .tracker-form-input{
+        width: 60vw;
+    }
+}
