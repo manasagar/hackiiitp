@@ -28,7 +28,6 @@ export const Nutrition = () => {
           setLoading(true);
           console.log(formData);
           const response = await axios.post('/api/nutrition/',formData);
-          console.log(response.data);
           navigate('/features/nutrition/output',{
             state:{
               output : response.data

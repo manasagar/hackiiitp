@@ -1,0 +1,77 @@
+.NutriOut_outer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100vw;
+    gap: 5vh;
+    padding-bottom: 10vh;
+}
+
+.Nutriout_header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+    font-weight: bold;
+    font-size : 1.3rem;
+}
+
+.NutriOut_Card{
+    display: flex;
+    flex-direction: column;
+    gap : 1vh ;
+    width: 20vw;
+    background-color: #D2E3C8;
+    align-items: center;
+    padding: 2vh 2vw;
+    margin-bottom: 1vh;
+    border-radius: 12px;
+}
+
+.NutriOut_Card img{
+    width: 12vw;
+    aspect-ratio: 3/2;
+}
+
+.NutriOut_Day{
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90 vw;
+}
+
+.NutriOut_Card p{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.NutriOutLi{
+    flex: none;
+}
+
+.Weekly_diet{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.NutriOutBMI{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    padding-bottom: 3vh;
+    
+}
+
+@media screen and (max-width : 980px) {
+    .NutriOut_Card{
+        width: 40vw;
+        font-size: 0.9rem;
+    }
+    .Nutriout_header{
+        font-size: 1 rem;
+    }
+}

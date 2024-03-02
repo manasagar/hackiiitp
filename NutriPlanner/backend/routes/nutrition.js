@@ -2,6 +2,24 @@ import express  from 'express';
 import axios from 'axios';
 const router=express.Router();
 
+const getData = async(listOfDictionaries)=>{
+    let out=[]
+        let ans = [{}, {}, {}, {}, {}, {}, {}];
+    
+        for (let i = 0; i < listOfDictionaries.length; i++) {
+        let dictionary = listOfDictionaries[i];
+        let ket=Object.keys(dictionary)
+        let c=0
+        
+        for(let j=0;j<ket.length;j++){
+            let m={}
+        m[ket[j]]=dictionary[ket[j]]
+        ans[j][i]=m;
+    }
+        }
+    return ans;
+}
+
 router
     .route('/')
     .post(async(req,res)=>{
@@ -46,8 +64,12 @@ router
         else{
             details.push(String(4));
         }
-        const Plan= await axios.post('http://127.0.0.1:5000/nutrition',{details});
-        res.status(200).send({weight : weight,height : height,num_meals : no_meals,plan : Plan.data});
+        const listOfDictionaries= await axios.post('http://127.0.0.1:5000/nutrition',{details});
+        console.log(listOfDictionaries)
+        const temp=listOfDictionaries.data;
+        const ans = await getData(temp);
+        res.status(200).send({height:height,weight:weight,plan:ans});
+
         }catch(error){
             return res.status(401).send('Error');
         }
