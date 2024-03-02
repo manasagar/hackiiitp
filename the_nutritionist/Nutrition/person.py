@@ -1,4 +1,3 @@
-
 from Nutrition.Generate_Recommendations import Generator
 from random import uniform as rnd
 from Nutrition.ImageFinder.image_handle import get_images_links as find_image
@@ -83,4 +82,3 @@ class Person:
         recommendations=json.dumps(recommendations)
         data_list = recommendations
         return data_list
-

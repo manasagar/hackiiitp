@@ -1,6 +1,6 @@
 
 from Nutrition import person
-
+from process import pre
 from flask import request
 
 from chatbot.chat import bot
@@ -44,10 +44,10 @@ def nutrition_details():
         recommendations=person.Person(age,height,weight,gender,activity,meals_calories_perc,weight_loss)
         data=recommendations.generate_recommendations()
         data= json.dumps(data)
-        print(data)
         data = json.loads(data)
-        print(data)
         return data
+        
+
 @app.route("/food_info",methods=['POST'])
 def nutrition_info():
     if request.method=='POST':
