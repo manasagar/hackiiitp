@@ -5,8 +5,7 @@ import chatBot from './routes/chatBot.js';
 import nutrition from './routes/nutrition.js';
 import tracker from './routes/tracker.js';
 import cookieParser from 'cookie-parser';
-import photoinfo from './routes/photoinfo.js';
-import blogs from './routes/blogs.js';
+import blogs from './routes/blog.js';
 import 'dotenv/config'
 const PORT=process.env.PORT;
 const app = express();
@@ -21,8 +20,6 @@ app.use('/api/user',signUp);
 app.use('/api/chatbot',chatBot);
 app.use('/api/nutrition',nutrition);
 app.use('/api/tracker',tracker);
-app.use('/api/upload',photoinfo);
-app.use('/api/blogs',blogs);
 app.use(cookieParser());
 
 const server = app.listen(PORT,()=>{  
