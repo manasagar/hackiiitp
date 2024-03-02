@@ -18,7 +18,7 @@ def scaling(dataframe):
     return prep_data,scaler
 
 def nn_predictor(prep_data):
-    neigh = NearestNeighbors(metric='cosine',algorithm='brute')
+    neigh = NearestNeighbors(metric='cosine',algorithm='brute',n_neighbors=7)
     neigh.fit(prep_data)
     return neigh
 
