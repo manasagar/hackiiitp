@@ -7,11 +7,11 @@ router
     .route('/all')
     .get(async(req,res)=>{
         try{
-        const resBody=await db.query('Select * from blogs');
+        const resBody=await db.query('Select * from blogs order by id asc');
         res.status(200).send(resBody.rows);
         }
         catch(error){
-            console.log(error);
+            res.status(400).send('No data found');
         }
     })
 
@@ -26,7 +26,7 @@ router
             res.status(200).send("Successfully created blog post");
         }
         catch(error){
-            console.log(error);
+            res.status(400).send('No data found');
         }
     })
 

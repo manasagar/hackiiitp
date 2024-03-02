@@ -8,6 +8,7 @@ import '../styles/blog.css'
 export const Blogs = () => {
   const [blog,setBlog] = useState([]);
   const navigate = useNavigate();
+  const [loading,setLoading] = useState(false);
 
   const handleCreate = () =>{
     navigate('/blogs/create');
@@ -27,10 +28,14 @@ export const Blogs = () => {
   useEffect(()=>{
     const getBlog = async()=>{
       try {
+        setLoading(true);
         const response = await axios.get('/api/blogs/all');
         setBlog(response.data);
       } catch (error) {
         console.log(error);
+      }
+      finally{
+        setLoading(false);
       }
     }
     getBlog();
@@ -51,13 +56,15 @@ export const Blogs = () => {
   return (
     <div className='Blog_Outer_Main'>
       <BackButton />
-      <div className="Blog_outer">
-      <div className='Blog_Container'>
-        <div className='Blog_heading'><h2>Blogs Nutrition</h2></div>
-        <div className="Blog_Main_button"><button onClick={handleCreate}>Create Post</button></div>
-        {cardBlog}
-      </div>
-      </div>
+      {loading ? <Loading /> : (
+        <div className="Blog_outer">
+        <div className='Blog_Container'>
+          <div className='Blog_heading'><h2>Nutrition Blogs</h2></div>
+          <div className="Blog_Main_button"><button onClick={handleCreate}>Create Post</button></div>
+          {cardBlog}
+        </div>
+        </div>
+      )}
     </div>
   )
 }

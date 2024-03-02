@@ -39,7 +39,7 @@ router
             res.status(201).send({user:findUser.rows[0],token:token});
         }
         catch(error){
-            console.log(error);
+            res.status(401).send('Try Again');
         }
     })
 router
@@ -83,7 +83,7 @@ router
 
         }
         catch(error){
-            console.log(error);
+            res.status(401).send('Try Again');
         }
     })
 
@@ -95,7 +95,7 @@ router
             const data="User Logout Successfully";
             res.status(200).send({data:data});
         } catch (error) {
-            console.log(error);
+            res.status(401).send('Try Again');
         }
     })
 

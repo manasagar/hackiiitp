@@ -7,7 +7,7 @@ router
     .post(async(req,res)=>{
         try{
         const details=[];
-        const {age,height,weight,gender,no_days,no_meals,weightLoss}=req.body;
+        let {age,height,weight,gender,no_days,no_meals,weightLoss}=req.body;
         details.push(age);
         details.push(height);
         details.push(weight);
@@ -31,7 +31,8 @@ router
             details.push(no_meals);
         }
         else {
-            details.push(5);
+            details.push(String(5));
+            no_meals = "5";
         }
         if(weightLoss=="Maintain Weight"){
             details.push(String(1));
@@ -45,12 +46,10 @@ router
         else{
             details.push(String(4));
         }
-        console.log(details);
         const Plan= await axios.post('http://127.0.0.1:5000/nutrition',{details});
-        console.log(Plan.data)
-        res.status(200).send(Plan.data);
+        res.status(200).send({weight : weight,height : height,num_meals : no_meals,plan : Plan.data});
         }catch(error){
-            console.log(error);
+            return res.status(401).send('Error');
         }
     })
 

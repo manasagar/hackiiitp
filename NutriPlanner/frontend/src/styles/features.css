@@ -45,6 +45,7 @@
 
 .feature-link a {
     text-decoration: none;
+    color: #666;
 }
 
 .feature-clicked {
@@ -56,7 +57,8 @@
     align-items: center;
     padding: 10px;
     background-color: #D2E3C8;
-    border-radius: 8px;
+    border-radius: 12px;
+    padding: 1.8vw;
 }
 
 .feature-clicked h1 {
@@ -92,11 +94,15 @@
 }
  
 .feature-border{
+    font-size: 1rem;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 6px;
+    padding: 10px;
+    margin: 0.5vw;
     width: 20vw;
     background-color: white;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 @media screen and (max-width:680px) {
@@ -105,12 +111,18 @@
     }
     .feature-clicked{
         max-width: none;
-        width: 70vw;
+        width: 80vw;
     }
     .feature-clicked img{
         width: 60vw;
     }
     .feature-clicked p{
         width: 60vw;
+    }
+    .feature-border{
+        margin: 1.3vw;
+    }
+    .feature-clicked h1{
+        font-size: 1.5rem;
     }
 }

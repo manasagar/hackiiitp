@@ -7,14 +7,17 @@ router
     .post(async(req,res)=>{
         try{
             const reqBody=req.body.chat;
-            const resBody=await axios.post('http://127.0.0.1:5000/chatbot',{reqBody});
-            if(!resBody){
-                res.status(404).send("Error 404 not found")
+            const botChat = {
+                'chat' : reqBody
             }
-            res.status(200).send({resBody});
+            const resBody=await axios.post('http://127.0.0.1:5000/chatbot',botChat);
+            if(!resBody){
+                return res.status(404).send("Error 404 not found")
+            }
+            return res.status(200).send(resBody.data);
         }
         catch(error){
-            console.log(error);
+            return res.status(404).send("Error 404 not found")
         }
     })
 

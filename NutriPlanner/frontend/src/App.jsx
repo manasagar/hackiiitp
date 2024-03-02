@@ -12,9 +12,7 @@ import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Features } from './pages/Features';
-import { FoodRecipe } from './pages/Features/FoodRecipe';
 import { Nutrition } from './pages/Features/Nutrition';
-import { PhotoInfo } from './pages/Features/PhotoInfo';
 import { Chatbot } from './pages/Features/Chatbot';
 import { Tracker } from './pages/Features/Tracker';
 import { useState } from 'react';
@@ -45,11 +43,9 @@ export const App =()=>{
       {token ? (
         <>
           <Route path='/features' element={<Features />} />
-          <Route path='/features/foodrecipe' element={<FoodRecipe/>}/>
           <Route path='/features/nutrition' element={<Nutrition/>}/>
           <Route path='/features/nutrition/output' element={<NutritionOutput/>}/>
           <Route path='/features/chatbot' element={<Chatbot />}/>
-          <Route path='/features/photoinfo' element={<PhotoInfo />}/>
           <Route path='/features/tracker' element={<Tracker />}/>
           <Route path='/features/tracker/output' element={<TrackerOutput />}/>
         </>

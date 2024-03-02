@@ -3,19 +3,19 @@ from Nutrition import person
 
 from flask import request
 
-# from chatbot.chat import bot
+from chatbot.chat import bot
 from Nutrition.Food_information.food import food_code
 from flask import Flask
 app = Flask(__name__)
 import json
-# @app.route("/chatbot",methods=['POST'])
-# def api_call():
-#     print(request)
-#     if request.method == 'POST':
-#         data = request.json
-#         text = data.get('chat')
-#         response=bot(text)
-#         return response
+@app.route("/chatbot",methods=['POST'])
+def api_call():
+    print(request)
+    if request.method == 'POST':
+        data = request.json
+        text = data.get('chat')
+        response=bot(text)
+        return response
 
 @app.route("/nutrition",methods=['POST'])
 def nutrition_details():

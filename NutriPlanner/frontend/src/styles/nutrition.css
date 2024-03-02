@@ -1,23 +1,29 @@
 .Nutri_outer{
   background-color: #f1f1ea;
+  padding-bottom: 10vh;
 }
 .nutrition-container {
     display: flex;
     justify-content: center;
 }
 
+.nutri-title{
+  margin-left: 6px;
+  font-size: 1.5rem;
+}
+
 .nutrition-form{
     width: 50vw;
-    margin: 10px;
+    margin: 6vh;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     background-color: #f0f0f0;
 }
   
   .nutrition-form-label {
     display: block;
-    margin: 6px;
+    margin: 8px;
   }
   
   .nutrition-form-input {
@@ -46,10 +52,6 @@
   margin: 0;
 }
 
-Firefox
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
   .nutrition-submit-button:hover{
     background-color: #3a9e86; 
@@ -57,6 +59,23 @@ input[type=number] {
   }
   .nutrition-submit-button:disabled {
     background-color: #ccc;
+}
+
+.nutri-header{
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 8px;
+  color: #21695c;
+  font-family: Poppins, sans-serif;
+}
+
+.nutri-body{
+  font-style: italic;
+  margin: 8px
+}
+
+.radio{
+  margin: 6px;
 }
 
 @media screen and (max-width : 960px) {
@@ -67,7 +86,12 @@ input[type=number] {
         width: 40vw;
     }
     .nutrition-submit-button{
-    width: 25vw;
-
+      width: 25vw;
+    }
+    .nutri-header{
+      font-size: 1.4rem;
+    }
+    .nutri-body{
+      font-size: 0.9rem;
     }
 }
