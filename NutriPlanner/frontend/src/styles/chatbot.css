@@ -1,5 +1,6 @@
 .chatbot-outer{
   background-color: #f1f1ea;
+  padding-bottom: 10vh;
 }
 .main-chatbot-container{
     display: flex;

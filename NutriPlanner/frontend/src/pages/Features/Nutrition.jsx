@@ -57,8 +57,8 @@ export const Nutrition = () => {
 
   return (
     <div className='Nutri_outer'>
-    {loading && <Loading />}
     <BackButton />
+    {loading ? <Loading /> : (
     <div className="nutrition-container">
       <form className='nutrition-form' onSubmit={handleSubmit}>
       <h1>Nutrition Form</h1>
@@ -217,6 +217,7 @@ export const Nutrition = () => {
        <button className='nutrition-submit-button' type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</button>
      </form>
    </div>
+   )}
    </div>
   )
 }

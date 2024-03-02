@@ -54,8 +54,8 @@ export const Tracker = () => {
 
   return (
     <div className='tracker-outer'>
-      {loading && <Loading />}
       <BackButton />
+      {loading ? <Loading /> : (
           <div className="nutrition-container">
             <form className='nutrition-form' onSubmit={handleSubmit}>
             <h1>Tracker Form</h1>
@@ -115,6 +115,7 @@ export const Tracker = () => {
                 <button className='nutrition-submit-button' type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</button>
               </form>
        </div>
+       )}
     </div>
   )
 }
