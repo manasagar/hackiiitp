@@ -9,7 +9,11 @@ import blogs from './routes/blog.js';
 import 'dotenv/config'
 const PORT=process.env.PORT;
 const app = express();
+try{
 db.connect();
+}catch{
+    console.log(error);
+}
 
 app.use(express.json());
 app.get('/',(req,res)=>{
