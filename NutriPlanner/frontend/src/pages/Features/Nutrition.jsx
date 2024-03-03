@@ -68,7 +68,7 @@ export const Nutrition = () => {
           What is your Age?
           <br />
           <input
-            type="number" inputMode="numeric"
+            type="text" 
             placeholder='Enter Age'
             name="age"
             value={formData.age}
@@ -82,7 +82,7 @@ export const Nutrition = () => {
           What is your Height?
           <br />
           <input
-            type="number"
+            type="text"
             name="height"
             placeholder='Enter Height(in cm)'
             value={formData.height}
@@ -96,7 +96,7 @@ export const Nutrition = () => {
           What is your Weight?
           <br />
           <input
-            type="number"
+            type="text"
             name="weight"
             placeholder='Enter Weight(in kg)'
             value={formData.weight}
@@ -140,7 +140,7 @@ export const Nutrition = () => {
           How many days do you exercise in a week?
           <br />
           <input
-            type="number"
+            type="text"
             name="no_days"
             placeholder='Enter no. of days'
             value={formData.no_days}
@@ -154,7 +154,7 @@ export const Nutrition = () => {
          How many meals do you typically have in a day?
          <br />
          <input
-           type="number"
+           type="text"
            name="no_meals"
            placeholder='Enter no. of meals'
            value={formData.no_meals}
