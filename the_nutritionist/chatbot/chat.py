@@ -1,9 +1,8 @@
 import os
 from dotenv import load_dotenv
-from langchain.document_loaders.csv_loader import CSVLoader
+from langchain_community.chat_models import ChatOpenAI
+
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_text_splitters import CharacterTextSplitter
-from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 from langchain_community.vectorstores import FAISS
 load_dotenv()
@@ -19,3 +18,4 @@ def bot(query):
     m=(qa.invoke({"query":query}))
     m=m['result'].replace('\n',' ')
     return m
+bot("hello")
