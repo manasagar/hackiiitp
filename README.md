@@ -57,9 +57,3 @@ To run this project, you will need to add the following environment variables to
 - Personalized Chatbot 
 
 
-## Screenshots
-
-![Alt text](https://drive.google.com/file/d/1RaNJE0sBi2bY0Mas8v_GOdBHVIxM8Wpm/view?usp=share_link)
-![App Screenshot](https://drive.google.com/file/d/1zaNWcSXr5emGO_QM_msifFX1ppGd8BNB/view?usp=share_link)
-![App Screenshot](https://drive.google.com/file/d/1vUImvq_RYLaeF8YyfI1BGhRbh1MfUmRS/view?usp=share_link)
-
