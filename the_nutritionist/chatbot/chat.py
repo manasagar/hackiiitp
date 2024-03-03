@@ -10,11 +10,7 @@ load_dotenv()
 def bot(query):
 
     llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
-    loader = CSVLoader(file_path='Nutrition/Data/dataset1.csv', encoding="utf-8")
-    data = loader.load()
 
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    texts = text_splitter.split_documents(data)
     embeddings = HuggingFaceEmbeddings()
     vectorstore = FAISS.load_local("chatbot/Faiss", embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
